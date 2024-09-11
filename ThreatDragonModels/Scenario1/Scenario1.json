@@ -16,11 +16,728 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 270,
+              "y": -20
+            },
+            "size": {
+              "width": 170,
+              "height": 160
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "IoT field gateway zone"
+              }
+            },
+            "id": "3bad6527-a24d-4eaf-9c72-d91501762313",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "IoT field gateway zone",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 18.0000000000002,
+              "y": 60
+            },
+            "size": {
+              "width": 160,
+              "height": 390
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Iot device zone"
+              }
+            },
+            "id": "a1f07375-66e7-4451-ae52-1bcca9d155d0",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Iot device zone",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 260,
+              "y": 10
+            },
+            "size": {
+              "width": 190,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "IOT field gateway"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "269342f7-7ee6-47dc-8300-20226a4b972c",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Process",
+              "name": "IOT field gateway",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "8e3e1d98-88ec-4041-8045-3a5708fe94d8",
+                  "title": "Upgraded versions of software",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Version of Iot field gateway must be latest",
+                  "mitigation": "1. Firmware Version: Ensure the current firmware supports updates for the SH4 gateway.\n    - Network Configuration: Verify that the gateway is connected to the network and has internet access to download updates.\n -  Backup: Back up any necessary configurations, data, or settings from the gateway before starting the update.\n\n2. Download the Update Package: Visit the vendor or manufacturer's website for the SH4 gateway to obtain the latest firmware or software update.\n -   Ensure that the downloaded package matches the model",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 44,
+              "y": 110
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Iot device 1"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "5943e63d-2ac0-44fd-9fde-57d7855d0fb2",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Iot device 1",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 44,
+              "y": 225
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Iot device 2"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "6c448365-c458-4e45-bfc1-c09719e4f8ea",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Iot device 2",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 44,
+              "y": 332
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Iot device 3"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "e3c04a6d-08b5-4148-ae84-9e3ec4a4f2ab",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Iot device 3",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "Request",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "77022c42-199b-42ea-8d36-db10370567d9",
+                  "title": "Authentication required when IoT Device makes request",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Authenticate request coming from IoT device.",
+                  "mitigation": "Validate that this Iot device is trusted and the request is legitimate so use JWT tokens",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "2a3597ed-6e39-40cf-b3fb-156304313f3b",
+            "source": {
+              "x": 140,
+              "y": 110
+            },
+            "target": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "labels": [
+              "Request"
+            ],
+            "vertices": [
+              {
+                "x": 180,
+                "y": 110
+              },
+              {
+                "x": 280,
+                "y": 76
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "bff3097d-dd71-4b36-bfed-9a12c7380815",
+                  "title": "Authenticate and check authorization for outgoing responses to the IoT device ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Must validate that the response is for IoT device # and is authenticated that IoT device ",
+                  "mitigation": "Validate that this Iot device is trusted and the response is going to the legitimate Iot device for example use JWT tokens or if using API keys then Assign each device a unique API key or token during provisioning. When the device sends a request, it must include this key in the request header for authentication. TLS/SSL Certificates: Use Public Key Infrastructure (PKI) to authenticate devices. Each device is issued a certificate, and mutual TLS (mTLS) can be used to authenticate both the client (IoT device) and the server. This provides a high level of security.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "8.5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "id": "557532ad-3e7d-4444-ab33-2c62032c6848",
+            "source": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "target": {
+              "x": 160,
+              "y": 150
+            },
+            "labels": [
+              "Response"
+            ],
+            "vertices": [
+              {
+                "x": 220,
+                "y": 150
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ef920ec0-f0d6-49cd-b08e-ce81f7a6bef0",
+                  "title": "Authenticate Request coming from IoT device 2",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "",
+                  "mitigation": "Validate that this Iot device is trusted and the request is legitimate for example use JWT tokens or if using API keys then Assign each device a unique API key or token during provisioning. When the device sends a request, it must include this key in the request header for authentication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "9e1fad96-9f88-4d7d-810e-8a387cae8b4e",
+            "source": {
+              "cell": "6c448365-c458-4e45-bfc1-c09719e4f8ea"
+            },
+            "target": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "vertices": [
+              {
+                "x": 210,
+                "y": 210
+              },
+              {
+                "x": 240,
+                "y": 190
+              },
+              {
+                "x": 260,
+                "y": 190
+              },
+              {
+                "x": 270,
+                "y": 170
+              }
+            ],
+            "labels": [
+              "Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "cb30750b-0842-499b-9134-4d31059b139e",
+                  "title": "Authenticate request coming from IoT device 3",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "",
+                  "mitigation": "Validate that this Iot device is trusted and the request is legitimate for example use JWT tokens or if using API keys then Assign each device a unique API key or token during provisioning. When the device sends a request, it must include this key in the request header for authentication. TLS/SSL Certificates: Use Public Key Infrastructure (PKI) to authenticate devices. Each device is issued a certificate, and mutual TLS (mTLS) can be used to authenticate both the client (IoT device) and the server. This provides a high level of security.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "e97aa3d3-fe24-4433-a5a6-f00087f29e64",
+            "source": {
+              "cell": "e3c04a6d-08b5-4148-ae84-9e3ec4a4f2ab"
+            },
+            "target": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "vertices": [
+              {
+                "x": 240,
+                "y": 362
+              },
+              {
+                "x": 270,
+                "y": 300
+              }
+            ],
+            "labels": [
+              "Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "191ec219-e893-414c-875d-2e6f7971e549",
+                  "title": "Authentication and authorization of responses",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "",
+                  "mitigation": "Validate that this Iot device is trusted and the response is going to the legitimate Iot device for example use JWT tokens or if using API keys then Assign each device a unique API key or token during provisioning. When the device sends a request, it must include this key in the request header for authentication. TLS/SSL Certificates: Use Public Key Infrastructure (PKI) to authenticate devices. Each device is issued a certificate, and mutual TLS (mTLS) can be used to authenticate both the client (IoT device) and the server. This provides a high level of security.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "8.5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "381f181e-0ff9-45b8-a0d0-ed43f81ac07a",
+            "source": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "target": {
+              "cell": "6c448365-c458-4e45-bfc1-c09719e4f8ea"
+            },
+            "vertices": [
+              {
+                "x": 250,
+                "y": 246
+              }
+            ],
+            "labels": [
+              "Response"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "dd482d7b-4e64-4f0d-bd97-fe9e25c98012",
+                  "title": "Authentication and authorization of data in response to IOT",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "",
+                  "mitigation": "Validate that this Iot device is trusted and the response is going to the legitimate Iot device for example use JWT tokens or if using API keys then Assign each device a unique API key or token during provisioning. When the device sends a request, it must include this key in the request header for authentication. TLS/SSL Certificates: Use Public Key Infrastructure (PKI) to authenticate devices. Each device is issued a certificate, and mutual TLS (mTLS) can be used to authenticate both the client (IoT device) and the server. This provides a high level of security.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "8.5"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "id": "cd828a54-f2de-4337-9bcb-9b65ad004c1e",
+            "source": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "target": {
+              "x": 160,
+              "y": 340
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": 370
+              }
+            ],
+            "labels": [
+              "Response"
+            ]
+          },
+          {
+            "position": {
+              "x": 500,
+              "y": 240
+            },
+            "size": {
+              "width": 140,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Azure Iot"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "23abc098-cce8-4c17-9d96-84962bee7ca0",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "Azure Iot",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 640,
+              "y": 110
+            },
+            "size": {
+              "width": 140,
+              "height": 190
+            },
+            "attrs": {
+              "text": {
+                "text": "Azure stream analytis"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "3ce1c415-8c2e-402b-b976-2e6cbd790e26",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Process",
+              "name": "Azure stream analytis",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 7
   }
 }
