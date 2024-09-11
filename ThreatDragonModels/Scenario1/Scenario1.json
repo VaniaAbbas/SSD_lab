@@ -32,8 +32,8 @@
                 "text": "IoT field gateway zone"
               }
             },
-            "id": "3bad6527-a24d-4eaf-9c72-d91501762313",
             "zIndex": -1,
+            "id": "3bad6527-a24d-4eaf-9c72-d91501762313",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "IoT field gateway zone",
@@ -57,8 +57,8 @@
                 "text": "Iot device zone"
               }
             },
-            "id": "a1f07375-66e7-4451-ae52-1bcca9d155d0",
             "zIndex": -1,
+            "id": "a1f07375-66e7-4451-ae52-1bcca9d155d0",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Iot device zone",
@@ -69,8 +69,103 @@
           },
           {
             "position": {
+              "x": 470,
+              "y": 72
+            },
+            "size": {
+              "width": 470,
+              "height": 550
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Azure zone"
+              }
+            },
+            "id": "06e2553e-0005-4ed2-ba42-ceaddf731fd8",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Azure zone",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 940,
+              "y": -147.9999999999999
+            },
+            "size": {
+              "width": 190,
+              "height": 190
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Consumer Zone"
+              }
+            },
+            "id": "886c8eb7-fa56-40ba-a440-9ca13d7f8922",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Consumer Zone",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1210,
+              "y": -159.99999999999886
+            },
+            "size": {
+              "width": 220,
+              "height": 200
+            },
+            "shape": "trust-boundary-box",
+            "id": "72bad5a4-03d3-4a00-a311-896c900fca1e",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 979,
+              "y": 92
+            },
+            "size": {
+              "width": 530,
+              "height": 540
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "IoT Cloud Gateway zone"
+              }
+            },
+            "id": "03e3b20e-15ff-41d4-96e7-faa91bcbd4f7",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "IoT Cloud Gateway zone",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 260,
-              "y": 10
+              "y": 0
             },
             "size": {
               "width": 190,
@@ -88,8 +183,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "269342f7-7ee6-47dc-8300-20226a4b972c",
             "zIndex": 1,
+            "id": "269342f7-7ee6-47dc-8300-20226a4b972c",
             "data": {
               "type": "tm.Process",
               "name": "IOT field gateway",
@@ -140,24 +235,55 @@
                 "text": "Iot device 1"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
-            "id": "5943e63d-2ac0-44fd-9fde-57d7855d0fb2",
             "zIndex": 2,
+            "id": "5943e63d-2ac0-44fd-9fde-57d7855d0fb2",
             "data": {
               "type": "tm.Actor",
               "name": "Iot device 1",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "2ff93ddf-b1d9-4f61-8c70-256d15eb6fa6",
+                  "title": "Old software versions",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Old versions may have vulnerabilities that can be exploited",
+                  "mitigation": "Old versions may have vulnerabilities that can be exploited\nContact vendor to get latest software version of IoT device.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "63e1a098-a7f5-42bf-aa63-cace10f5adf0",
+                  "title": "End to end encryption",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "",
+                  "mitigation": "End-to-End Encryption: Always use encrypted communication channels (e.g., TLS) to secure data in transit between IoT devices and the cloud.\nUse Secure Key Management: Ensure that private keys and certificates used with these hash algorithms are securely stored and managed, such as using hardware security modules (HSMs) or Trusted Platform Modules (TPMs).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -174,24 +300,42 @@
                 "text": "Iot device 2"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
-            "id": "6c448365-c458-4e45-bfc1-c09719e4f8ea",
             "zIndex": 3,
+            "id": "6c448365-c458-4e45-bfc1-c09719e4f8ea",
             "data": {
               "type": "tm.Actor",
               "name": "Iot device 2",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "e77c4b4c-9b31-4cb7-ab83-4cd1230d03e3",
+                  "title": "Lack of Encryption",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "",
+                  "mitigation": "End-to-End Encryption: Always use encrypted communication channels (e.g., TLS) to secure data in transit between IoT devices and the cloud.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -208,24 +352,42 @@
                 "text": "Iot device 3"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
-            "id": "e3c04a6d-08b5-4148-ae84-9e3ec4a4f2ab",
             "zIndex": 4,
+            "id": "e3c04a6d-08b5-4148-ae84-9e3ec4a4f2ab",
             "data": {
               "type": "tm.Actor",
               "name": "Iot device 3",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "1e68adf9-0379-487d-bb77-2cca2db6b82b",
+                  "title": "Device Impersonation ",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Device Impersonation:  IoT devices (SH1, SH2, SH3) could be impersonated by unauthorized devices.",
+                  "mitigation": "Device Authentication: Use mutual TLS (mTLS) with X.509 certificates to authenticate IoT devices (SH1, SH2, SH3).\nEncryption: Secure communication between devices and gateways using end-to-end encryption (TLS 1.2/1.3) to prevent MitM attacks.\nData Integrity Checks: Use hash-based message authentication codes (HMAC) or digital signatures to ensure data integrity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -280,6 +442,9 @@
               }
             },
             "id": "2a3597ed-6e39-40cf-b3fb-156304313f3b",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "x": 140,
               "y": 110
@@ -287,9 +452,6 @@
             "target": {
               "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
             },
-            "labels": [
-              "Request"
-            ],
             "vertices": [
               {
                 "x": 180,
@@ -353,6 +515,9 @@
               }
             },
             "id": "557532ad-3e7d-4444-ab33-2c62032c6848",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
             },
@@ -360,9 +525,6 @@
               "x": 160,
               "y": 150
             },
-            "labels": [
-              "Response"
-            ],
             "vertices": [
               {
                 "x": 220,
@@ -422,6 +584,9 @@
               }
             },
             "id": "9e1fad96-9f88-4d7d-810e-8a387cae8b4e",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "6c448365-c458-4e45-bfc1-c09719e4f8ea"
             },
@@ -445,9 +610,6 @@
                 "x": 270,
                 "y": 170
               }
-            ],
-            "labels": [
-              "Request"
             ]
           },
           {
@@ -502,6 +664,9 @@
               }
             },
             "id": "e97aa3d3-fe24-4433-a5a6-f00087f29e64",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "e3c04a6d-08b5-4148-ae84-9e3ec4a4f2ab"
             },
@@ -517,9 +682,6 @@
                 "x": 270,
                 "y": 300
               }
-            ],
-            "labels": [
-              "Request"
             ]
           },
           {
@@ -574,6 +736,9 @@
               }
             },
             "id": "381f181e-0ff9-45b8-a0d0-ed43f81ac07a",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
             },
@@ -585,9 +750,6 @@
                 "x": 250,
                 "y": 246
               }
-            ],
-            "labels": [
-              "Response"
             ]
           },
           {
@@ -642,6 +804,9 @@
               }
             },
             "id": "cd828a54-f2de-4337-9bcb-9b65ad004c1e",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
             },
@@ -654,15 +819,950 @@
                 "x": 410,
                 "y": 370
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "c47cd802-2ee0-421f-b53a-a5345e7cbe34",
+            "source": {
+              "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
+            },
+            "target": {
+              "cell": "3ce1c415-8c2e-402b-b976-2e6cbd790e26"
+            },
+            "labels": [
+              "Request"
+            ],
+            "vertices": [
+              {
+                "x": 600,
+                "y": 240
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "2a50ef3a-24b2-4499-83bc-13e24ef74d7d",
+                  "title": "Validate Response",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "",
+                  "mitigation": "Devices can be provisioned with a symmetric key that is used to sign requests. Azure IoT Hub supports Shared Access Signature (SAS) tokens, which the device generates using its symmetric key.\nUse X.509 certificates for mutual authentication (mTLS) between the IoT device and Azure IoT Hub.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "id": "2f3be9f2-7ac3-49e0-ae64-871674f3abce",
+            "source": {
+              "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
+            },
+            "target": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "labels": [
+              "Response"
+            ],
+            "vertices": [
+              {
+                "x": 490,
+                "y": 190
+              },
+              {
+                "x": 490,
+                "y": 170
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "14d728ab-e559-4b00-a144-0b3c2e1e0397",
+                  "title": "Authenticate Request",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Replay attack can take place",
+                  "mitigation": "Devices can be provisioned with a symmetric key that is used to sign requests. Azure IoT Hub supports Shared Access Signature (SAS) tokens, which the device generates using its symmetric key. \nUse X.509 certificates for mutual authentication (mTLS) between the IoT device and Azure IoT Hub. ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "id": "91ff2f4d-251c-4010-93c7-88616324a718",
+            "source": {
+              "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
+            },
+            "target": {
+              "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
+            },
+            "labels": [
+              "Request"
+            ],
+            "vertices": [
+              {
+                "x": 440,
+                "y": 210
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e958407f-4fb4-44b6-92ad-8a3551a7db3a",
+            "source": {
+              "cell": "3ce1c415-8c2e-402b-b976-2e6cbd790e26"
+            },
+            "target": {
+              "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
+            },
+            "labels": [
+              "Response"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "8efde589-cf3d-45f0-82bc-efb9ed035788",
+            "source": {
+              "cell": "3ce1c415-8c2e-402b-b976-2e6cbd790e26"
+            },
+            "target": {
+              "cell": "d55c97d1-9a5c-4df3-bd58-b5a6c348c25a"
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 380
+              }
+            ],
+            "labels": [
+              "Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "42cba8ae-fc90-409d-9561-95b36bee731e",
+            "source": {
+              "cell": "d55c97d1-9a5c-4df3-bd58-b5a6c348c25a"
+            },
+            "target": {
+              "cell": "3ce1c415-8c2e-402b-b976-2e6cbd790e26"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 390
+              },
+              {
+                "x": 640,
+                "y": 330
+              }
             ],
             "labels": [
               "Response"
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "9a437f9e-3823-4155-9183-7154493d4488",
+            "source": {
+              "x": 765,
+              "y": 485
+            },
+            "target": {
+              "cell": "b451de21-5c2c-44b5-a5d2-826357cbb46b"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ced9e231-4bd2-4e96-8a82-ee246c2cd911",
+            "source": {
+              "cell": "b451de21-5c2c-44b5-a5d2-826357cbb46b"
+            },
+            "target": {
+              "cell": "3096d962-9f3b-455b-bad8-31242dff7e95"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "64768467-89e7-4aae-bd65-8306fdc50a1e",
+            "source": {
+              "cell": "c686cd3d-2109-4743-9a78-c603b1dce9c9"
+            },
+            "target": {
+              "cell": "e1408e7e-6111-463c-b3d0-c994b957874b"
+            },
+            "labels": [
+              "Request"
+            ],
+            "vertices": [
+              {
+                "x": 1180,
+                "y": -100
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "607709cd-dffe-41a6-8b2c-bb6422153359",
+            "source": {
+              "cell": "e1408e7e-6111-463c-b3d0-c994b957874b"
+            },
+            "target": {
+              "cell": "c686cd3d-2109-4743-9a78-c603b1dce9c9"
+            },
+            "labels": [
+              "Response"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "54941033-337f-48c0-95f7-91dff65246bb",
+            "source": {
+              "x": 830,
+              "y": 285
+            },
+            "target": {
+              "cell": "b7b02438-04aa-4285-b7cc-5f550ba93f12"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "bea45393-3413-4e13-aeff-1c6c1e00a869",
+            "source": {
+              "cell": "e80f2603-85ce-4bbe-8ab3-a2196db65e99"
+            },
+            "target": {
+              "x": 1310,
+              "y": 320
+            },
+            "vertices": [
+              {
+                "x": 1310,
+                "y": 400
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "8e36f535-a896-42f3-82ea-4a3d7019df2a",
+            "source": {
+              "cell": "0b15ab0e-c5ed-4c56-b4b6-f7fdfdb03992"
+            },
+            "target": {
+              "x": 1082,
+              "y": 312.0000000000001
+            },
+            "labels": [
+              "Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "4e69b8c6-cccb-4440-b797-a97d424a54ad",
+            "source": {
+              "cell": "b7b02438-04aa-4285-b7cc-5f550ba93f12"
+            },
+            "target": {
+              "cell": "0b15ab0e-c5ed-4c56-b4b6-f7fdfdb03992"
+            },
+            "labels": [
+              "Response"
+            ],
+            "vertices": [
+              {
+                "x": 1170,
+                "y": 360
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1865be3a-0051-48c0-b3b6-56de4268ebc8",
+            "source": {
+              "cell": "b7b02438-04aa-4285-b7cc-5f550ba93f12"
+            },
+            "target": {
+              "cell": "02aab606-6693-4523-8b4e-09a166cc3d41"
+            },
+            "vertices": [
+              {
+                "x": 1220,
+                "y": 160
+              }
+            ],
+            "labels": [
+              "Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Respond",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "427e8df8-4310-4489-bb31-4afe691a7f47",
+            "source": {
+              "cell": "02aab606-6693-4523-8b4e-09a166cc3d41"
+            },
+            "target": {
+              "cell": "b7b02438-04aa-4285-b7cc-5f550ba93f12"
+            },
+            "vertices": [
+              {
+                "x": 1250,
+                "y": 330
+              }
+            ],
+            "labels": [
+              "Respond"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "19190532-3274-4dfb-aa50-5bf556ffe199",
+            "source": {
+              "cell": "02aab606-6693-4523-8b4e-09a166cc3d41"
+            },
+            "target": {
+              "cell": "e80f2603-85ce-4bbe-8ab3-a2196db65e99"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "2ebd0db6-757e-4518-ba3c-0855bbc038a4",
+            "source": {
+              "cell": "e1408e7e-6111-463c-b3d0-c994b957874b"
+            },
+            "target": {
+              "cell": "02aab606-6693-4523-8b4e-09a166cc3d41"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "1e3d87ef-0a26-4f1e-9b37-1ea39981184b",
+            "source": {
+              "cell": "02aab606-6693-4523-8b4e-09a166cc3d41"
+            },
+            "target": {
+              "cell": "e1408e7e-6111-463c-b3d0-c994b957874b"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "a15708a7-b5cf-4f57-98b0-7d1bde89fdb3",
+            "source": {
+              "cell": "02aab606-6693-4523-8b4e-09a166cc3d41"
+            },
+            "target": {
+              "cell": "e1408e7e-6111-463c-b3d0-c994b957874b"
+            },
+            "vertices": [
+              {
+                "x": 1280,
+                "y": 60
+              },
+              {
+                "x": 1280,
+                "y": -10
+              }
+            ]
+          },
+          {
             "position": {
-              "x": 500,
-              "y": 240
+              "x": 470,
+              "y": 312
             },
             "size": {
               "width": 140,
@@ -673,33 +1773,81 @@
                 "text": "Azure Iot"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
-            "id": "23abc098-cce8-4c17-9d96-84962bee7ca0",
             "zIndex": 11,
+            "id": "23abc098-cce8-4c17-9d96-84962bee7ca0",
             "data": {
               "type": "tm.Process",
               "name": "Azure Iot",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "9ddbee23-d712-483c-94f9-d3c3052377f1",
+                  "title": "Unauthorized Access",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Unauthorized Access: Unauthorized entities could access Azure IoT Hub (SH5) or Stream Analytics (SH6).",
+                  "mitigation": "Role-Based Access Control (RBAC): Use RBAC and Azure Active Directory (AAD) to control access to Azure services. Only authorized users should be able to interact with the data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "bdfabf4d-a9f1-4afa-81fb-9c4337b7e9e1",
+                  "title": "Data Breach",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Data Breach: Sensitive data from Analytics/Machine Learning (SH8) or Azure Storage (SH9) could be accessed by attackers.",
+                  "mitigation": "Token-based Authentication: Implement OAuth 2.0 or SAS tokens for secure device-to-cloud and cloud-to-device communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                },
+                {
+                  "id": "15e53a4f-8385-4e10-b56d-96db83ced23a",
+                  "title": "Denial of Service (DoS)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Attackers could flood Azure services with excessive requests, leading to a DoS scenario.",
+                  "mitigation": "Rate Limiting and Throttling: Configure rate limits on Azure services to prevent DoS attacks.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
             "position": {
-              "x": 640,
-              "y": 110
+              "x": 610,
+              "y": 72
             },
             "size": {
               "width": 140,
@@ -717,8 +1865,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "3ce1c415-8c2e-402b-b976-2e6cbd790e26",
             "zIndex": 12,
+            "id": "3ce1c415-8c2e-402b-b976-2e6cbd790e26",
             "data": {
               "type": "tm.Process",
               "name": "Azure stream analytis",
@@ -732,12 +1880,490 @@
               "privilegeLevel": "",
               "threats": []
             }
+          },
+          {
+            "position": {
+              "x": 520,
+              "y": 450
+            },
+            "size": {
+              "width": 160,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Azure Storage (SH9)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "d55c97d1-9a5c-4df3-bd58-b5a6c348c25a",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Azure Storage (SH9)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "39cffb4e-a9c4-447a-895c-89973635a030",
+                  "title": "Validate Requests",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "",
+                  "mitigation": "OAuth 2.0/SAS Tokens: For secure device-to-cloud and cloud-to-device communication.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 720,
+              "y": 470
+            },
+            "size": {
+              "width": 110,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Analytics/ml"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "3096d962-9f3b-455b-bad8-31242dff7e95",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Process",
+              "name": "Analytics/ml",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 720,
+              "y": 225
+            },
+            "size": {
+              "width": 170,
+              "height": 150
+            },
+            "attrs": {
+              "text": {
+                "text": "Data validation and penetration"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "b451de21-5c2c-44b5-a5d2-826357cbb46b",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Process",
+              "name": "Data validation and penetration",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 979,
+              "y": -80
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "User/service"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "c686cd3d-2109-4743-9a78-c603b1dce9c9",
+            "zIndex": 16,
+            "data": {
+              "type": "tm.Actor",
+              "name": "User/service",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "910a215b-b68e-4fea-baf7-caffd2183584",
+                  "title": "Unauthorized access",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Unauthorized users or services may attempt to gain access to the IoT field gateway (SH4) or other internal services.",
+                  "mitigation": "Authentication and Authorization: Implement strong authentication (OAuth 2.0, X.509 certificates, or JWT tokens) and authorization mechanisms, ensuring that only authorized users or services can make requests.\nRole-Based Access Control (RBAC): Use RBAC to limit what authenticated users or services can access or modify based on their roles.\nMulti-Factor Authentication (MFA): For consumer access, enforce MFA to add an additional layer of security.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1250,
+              "y": -130
+            },
+            "size": {
+              "width": 180,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "IoT field gateway (SH4)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "e1408e7e-6111-463c-b3d0-c994b957874b",
+            "zIndex": 17,
+            "data": {
+              "type": "tm.Process",
+              "name": "IoT field gateway (SH4)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "e90c4713-b631-4dd2-b298-f88938971d66",
+                  "title": "Replay attacks",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Threat: Attackers could capture and replay a legitimate request from a user or service to the IoT field gateway, potentially gaining unauthorized access.",
+                  "mitigation": "Nonce or Timestamps in Requests: Include a nonce (a unique value) or timestamp in each request to ensure that the same request cannot be reused or replayed\nToken Expiration: Use short-lived tokens (e.g., OAuth tokens) that expire quickly, reducing the time window in which a replay attack can succeed.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1020,
+              "y": 165
+            },
+            "size": {
+              "width": 190,
+              "height": 180
+            },
+            "attrs": {
+              "text": {
+                "text": "IoT cloud gateway (sh10)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "b7b02438-04aa-4285-b7cc-5f550ba93f12",
+            "zIndex": 18,
+            "data": {
+              "type": "tm.Process",
+              "name": "IoT cloud gateway (sh10)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "db4e40ca-9926-48f4-8a6d-9ab2284d08c1",
+                  "title": "Identify spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Attackers could attempt to spoof the identity of IoT devices or cloud services.",
+                  "mitigation": "Identity Federation: Use a robust identity federation service (like Azure AD or a third-party IAM system) to authenticate users and services.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "9"
+                },
+                {
+                  "id": "a23cf6fc-484b-44b3-891c-bd78dd353e2c",
+                  "title": "request/response handling",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "",
+                  "mitigation": "Request/Response Handling: Proper authentication, encryption (such as TLS), and integrity checks should be applied at every request and response to prevent tampering, data leakage, or man-in-the-middle attacks.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1240,
+              "y": 140
+            },
+            "size": {
+              "width": 250,
+              "height": 200
+            },
+            "attrs": {
+              "text": {
+                "text": "Front-end Services SH11"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "02aab606-6693-4523-8b4e-09a166cc3d41",
+            "zIndex": 19,
+            "data": {
+              "type": "tm.Process",
+              "name": "Front-end Services SH11",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "acc7e4cc-2386-4176-a194-b30cf852149d",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 21,
+                  "score": ""
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 1260,
+              "y": 420
+            },
+            "size": {
+              "width": 180,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Backend services"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "e80f2603-85ce-4bbe-8ab3-a2196db65e99",
+            "zIndex": 20,
+            "data": {
+              "type": "tm.Process",
+              "name": "Backend services",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "ecb921f2-f23c-4666-abee-7228bd707067",
+                  "title": "Data Interception",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Data Interception: Interception of data between the IoT Field Gateway and Backend Services (SH12).",
+                  "mitigation": "Least Privilege Principle: Implement the least privilege access model for Backend Services and Identity System, ensuring no entity has more access than necessary.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1032,
+              "y": 412.0000000000001
+            },
+            "size": {
+              "width": 190,
+              "height": 170
+            },
+            "attrs": {
+              "text": {
+                "text": "Identity system"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "0b15ab0e-c5ed-4c56-b4b6-f7fdfdb03992",
+            "zIndex": 21,
+            "data": {
+              "type": "tm.Process",
+              "name": "Identity system",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "f3e0df74-6929-4fa7-adec-97b34e544bd2",
+                  "title": "Identity impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "",
+                  "mitigation": "Multi-factor Authentication (MFA): Adds an additional layer of security by requiring a second factor for user authentication.\nToken Expiration and Rotation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 7
+    "threatTop": 25
   }
 }
