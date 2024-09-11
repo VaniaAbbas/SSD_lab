@@ -1,0 +1,26 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Scenario1",
+    "owner": "Vania",
+    "description": "In the smart AVS, followed the architecture of a BMW Level-3 smart AVS, which allows for autonomous driving in\ncertain conditions. The driver can use a smartphone application to control the autonomous vehicle. The mobile\napplication shows various pieces of information about the vehicle, such as location, speed, and firmware updates\nstatus. The vehicle contains different types of sensors, such as a camera, radar, and LiDAR, and actuators such\nas ECUs that control it in autonomous driving mode by analyzing the outer environment. The vehicle is also able\nto communicate with other vehicles using the vehicle-to-everything sensor or a GPS receiver. Based on the way\nthe different components work, we divide the whole use-case into three zones, i.e., sensor zone, cloud zone, and\nconsumer zone. To proceed with the use-case reconnaissance step, we first collected a detailed description of all\nthe stakeholders in the smart AVS use-case. Smart AVS is designed to automate the process of driving to reduce\nthe risk of accidents and make driving decisions intelligently.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.2.0",
+        "cells": []
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
