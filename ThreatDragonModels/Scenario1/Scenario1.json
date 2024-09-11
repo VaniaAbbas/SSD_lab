@@ -82,8 +82,8 @@
                 "text": "Azure zone"
               }
             },
-            "id": "06e2553e-0005-4ed2-ba42-ceaddf731fd8",
             "zIndex": -1,
+            "id": "06e2553e-0005-4ed2-ba42-ceaddf731fd8",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Azure zone",
@@ -107,8 +107,8 @@
                 "text": "Consumer Zone"
               }
             },
-            "id": "886c8eb7-fa56-40ba-a440-9ca13d7f8922",
             "zIndex": -1,
+            "id": "886c8eb7-fa56-40ba-a440-9ca13d7f8922",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Consumer Zone",
@@ -127,8 +127,8 @@
               "height": 200
             },
             "shape": "trust-boundary-box",
-            "id": "72bad5a4-03d3-4a00-a311-896c900fca1e",
             "zIndex": -1,
+            "id": "72bad5a4-03d3-4a00-a311-896c900fca1e",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -152,8 +152,8 @@
                 "text": "IoT Cloud Gateway zone"
               }
             },
-            "id": "03e3b20e-15ff-41d4-96e7-faa91bcbd4f7",
             "zIndex": -1,
+            "id": "03e3b20e-15ff-41d4-96e7-faa91bcbd4f7",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "IoT Cloud Gateway zone",
@@ -853,15 +853,15 @@
               "threats": []
             },
             "id": "c47cd802-2ee0-421f-b53a-a5345e7cbe34",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
             },
             "target": {
               "cell": "3ce1c415-8c2e-402b-b976-2e6cbd790e26"
             },
-            "labels": [
-              "Request"
-            ],
             "vertices": [
               {
                 "x": 600,
@@ -921,15 +921,15 @@
               }
             },
             "id": "2f3be9f2-7ac3-49e0-ae64-871674f3abce",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
             },
             "target": {
               "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
             },
-            "labels": [
-              "Response"
-            ],
             "vertices": [
               {
                 "x": 490,
@@ -993,15 +993,15 @@
               }
             },
             "id": "91ff2f4d-251c-4010-93c7-88616324a718",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "269342f7-7ee6-47dc-8300-20226a4b972c"
             },
             "target": {
               "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
             },
-            "labels": [
-              "Request"
-            ],
             "vertices": [
               {
                 "x": 440,
@@ -1041,15 +1041,15 @@
               "threats": []
             },
             "id": "e958407f-4fb4-44b6-92ad-8a3551a7db3a",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "3ce1c415-8c2e-402b-b976-2e6cbd790e26"
             },
             "target": {
               "cell": "23abc098-cce8-4c17-9d96-84962bee7ca0"
-            },
-            "labels": [
-              "Response"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1083,6 +1083,9 @@
               "threats": []
             },
             "id": "8efde589-cf3d-45f0-82bc-efb9ed035788",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "3ce1c415-8c2e-402b-b976-2e6cbd790e26"
             },
@@ -1094,9 +1097,6 @@
                 "x": 700,
                 "y": 380
               }
-            ],
-            "labels": [
-              "Request"
             ]
           },
           {
@@ -1131,6 +1131,9 @@
               "threats": []
             },
             "id": "42cba8ae-fc90-409d-9561-95b36bee731e",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "d55c97d1-9a5c-4df3-bd58-b5a6c348c25a"
             },
@@ -1146,9 +1149,6 @@
                 "x": 640,
                 "y": 330
               }
-            ],
-            "labels": [
-              "Response"
             ]
           },
           {
@@ -1262,15 +1262,15 @@
               "threats": []
             },
             "id": "64768467-89e7-4aae-bd65-8306fdc50a1e",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "c686cd3d-2109-4743-9a78-c603b1dce9c9"
             },
             "target": {
               "cell": "e1408e7e-6111-463c-b3d0-c994b957874b"
             },
-            "labels": [
-              "Request"
-            ],
             "vertices": [
               {
                 "x": 1180,
@@ -1310,15 +1310,15 @@
               "threats": []
             },
             "id": "607709cd-dffe-41a6-8b2c-bb6422153359",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "e1408e7e-6111-463c-b3d0-c994b957874b"
             },
             "target": {
               "cell": "c686cd3d-2109-4743-9a78-c603b1dce9c9"
-            },
-            "labels": [
-              "Response"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1438,16 +1438,16 @@
               "threats": []
             },
             "id": "8e36f535-a896-42f3-82ea-4a3d7019df2a",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "0b15ab0e-c5ed-4c56-b4b6-f7fdfdb03992"
             },
             "target": {
               "x": 1082,
               "y": 312.0000000000001
-            },
-            "labels": [
-              "Request"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1481,15 +1481,15 @@
               "threats": []
             },
             "id": "4e69b8c6-cccb-4440-b797-a97d424a54ad",
+            "labels": [
+              "Response"
+            ],
             "source": {
               "cell": "b7b02438-04aa-4285-b7cc-5f550ba93f12"
             },
             "target": {
               "cell": "0b15ab0e-c5ed-4c56-b4b6-f7fdfdb03992"
             },
-            "labels": [
-              "Response"
-            ],
             "vertices": [
               {
                 "x": 1170,
@@ -1529,6 +1529,9 @@
               "threats": []
             },
             "id": "1865be3a-0051-48c0-b3b6-56de4268ebc8",
+            "labels": [
+              "Request"
+            ],
             "source": {
               "cell": "b7b02438-04aa-4285-b7cc-5f550ba93f12"
             },
@@ -1540,9 +1543,6 @@
                 "x": 1220,
                 "y": 160
               }
-            ],
-            "labels": [
-              "Request"
             ]
           },
           {
@@ -1577,6 +1577,9 @@
               "threats": []
             },
             "id": "427e8df8-4310-4489-bb31-4afe691a7f47",
+            "labels": [
+              "Respond"
+            ],
             "source": {
               "cell": "02aab606-6693-4523-8b4e-09a166cc3d41"
             },
@@ -1588,9 +1591,6 @@
                 "x": 1250,
                 "y": 330
               }
-            ],
-            "labels": [
-              "Respond"
             ]
           },
           {
@@ -1902,8 +1902,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "d55c97d1-9a5c-4df3-bd58-b5a6c348c25a",
             "zIndex": 13,
+            "id": "d55c97d1-9a5c-4df3-bd58-b5a6c348c25a",
             "data": {
               "type": "tm.Actor",
               "name": "Azure Storage (SH9)",
@@ -1954,8 +1954,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "3096d962-9f3b-455b-bad8-31242dff7e95",
             "zIndex": 14,
+            "id": "3096d962-9f3b-455b-bad8-31242dff7e95",
             "data": {
               "type": "tm.Process",
               "name": "Analytics/ml",
@@ -1991,8 +1991,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "b451de21-5c2c-44b5-a5d2-826357cbb46b",
             "zIndex": 15,
+            "id": "b451de21-5c2c-44b5-a5d2-826357cbb46b",
             "data": {
               "type": "tm.Process",
               "name": "Data validation and penetration",
@@ -2028,8 +2028,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "c686cd3d-2109-4743-9a78-c603b1dce9c9",
             "zIndex": 16,
+            "id": "c686cd3d-2109-4743-9a78-c603b1dce9c9",
             "data": {
               "type": "tm.Actor",
               "name": "User/service",
@@ -2080,8 +2080,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "e1408e7e-6111-463c-b3d0-c994b957874b",
             "zIndex": 17,
+            "id": "e1408e7e-6111-463c-b3d0-c994b957874b",
             "data": {
               "type": "tm.Process",
               "name": "IoT field gateway (SH4)",
@@ -2139,8 +2139,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "b7b02438-04aa-4285-b7cc-5f550ba93f12",
             "zIndex": 18,
+            "id": "b7b02438-04aa-4285-b7cc-5f550ba93f12",
             "data": {
               "type": "tm.Process",
               "name": "IoT cloud gateway (sh10)",
@@ -2211,8 +2211,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "02aab606-6693-4523-8b4e-09a166cc3d41",
             "zIndex": 19,
+            "id": "02aab606-6693-4523-8b4e-09a166cc3d41",
             "data": {
               "type": "tm.Process",
               "name": "Front-end Services SH11",
@@ -2262,8 +2262,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "e80f2603-85ce-4bbe-8ab3-a2196db65e99",
             "zIndex": 20,
+            "id": "e80f2603-85ce-4bbe-8ab3-a2196db65e99",
             "data": {
               "type": "tm.Process",
               "name": "Backend services",
@@ -2302,8 +2302,8 @@
           },
           {
             "position": {
-              "x": 1032,
-              "y": 412.0000000000001
+              "x": 1050,
+              "y": 332
             },
             "size": {
               "width": 190,
@@ -2314,22 +2314,22 @@
                 "text": "Identity system"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
-            "id": "0b15ab0e-c5ed-4c56-b4b6-f7fdfdb03992",
             "zIndex": 21,
+            "id": "0b15ab0e-c5ed-4c56-b4b6-f7fdfdb03992",
             "data": {
               "type": "tm.Process",
               "name": "Identity system",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -2338,7 +2338,7 @@
                 {
                   "id": "f3e0df74-6929-4fa7-adec-97b34e544bd2",
                   "title": "Identity impersonation",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Spoofing",
                   "description": "",
@@ -2350,7 +2350,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
